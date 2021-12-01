@@ -1,5 +1,5 @@
 {% set name = "protoletariat" %}
-{% set version = "0.5.3" %}
+{% set version = "0.6.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 3cf9d25a70e25f920e2b5517e0b781fe258f685d8af7b7b519e12ef4488497dd
+  sha256: 97fdb4e13a50f495dd2437987906f1a779bd7773246fd91133befa75a3ade9ac
 
 build:
   number: 0
@@ -23,14 +23,15 @@ requirements:
     - poetry
   run:
     - python >=3.7
+    - astunparse >=1.6.3,<2
     - click >=8.0.1,<9
     - protobuf >=3.19.1,<4
-    - typed-ast >=1.4.0,<2
-    - astunparse >=1.6.3,<2
 
 test:
   requires:
     - pytest
+    - mypy-protobuf
+    - grpcio
   imports:
     - protoletariat
     - protoletariat.tests
