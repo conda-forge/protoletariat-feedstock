@@ -1,5 +1,5 @@
 {% set name = "protoletariat" %}
-{% set version = "0.6.0" %}
+{% set version = "0.6.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 97fdb4e13a50f495dd2437987906f1a779bd7773246fd91133befa75a3ade9ac
+  sha256: d6c64cdf86a99c398cdcb19058d05818ead3f14ed8047fe3290a5e6a2618eb26
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - protol = protoletariat.__main__:main
 
@@ -23,9 +23,9 @@ requirements:
     - poetry
   run:
     - python >=3.7
-    - astunparse >=1.6.3,<2
-    - click >=8.0.1,<9
-    - protobuf >=3.19.1,<4
+    - astunparse <2.0.0,>=1.6.3
+    - click <9.0.0,>=8.0.1
+    - protobuf <4.0.0,>=3.19.1
 
 test:
   requires:
@@ -45,7 +45,7 @@ about:
   license: Apache-2.0
   license_family: APACHE
   license_file: LICENSE
-  summary: 'Protocol buffers for the rest of us'
+  summary: Protocol buffers for the rest of us
   description: |
     protoletariat is a tool for fixing the imports in stock protoc or buf
     generated Python code
