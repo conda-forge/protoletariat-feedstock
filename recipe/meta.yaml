@@ -1,5 +1,5 @@
 {% set name = "protoletariat" %}
-{% set version = "0.7.0" %}
+{% set version = "0.7.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6e9469137e5ac9cbd2644df2a322c28ccefdf155cd306bc4e562960c0df74181
+  sha256: 3717fe52f489b91e9abc4757fe1157c16240448318459d746ba886e211057cb5
 
 build:
   number: 0
@@ -32,6 +32,7 @@ test:
     - pytest
     - mypy-protobuf
     - grpcio
+    - grpc-cpp
   imports:
     - protoletariat
     - protoletariat.tests
