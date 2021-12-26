@@ -32,6 +32,7 @@ test:
     - pytest
     - mypy-protobuf
     - grpcio
+    - grpc-cpp
   imports:
     - protoletariat
     - protoletariat.tests
