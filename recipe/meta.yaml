@@ -1,5 +1,5 @@
 {% set name = "protoletariat" %}
-{% set version = "0.7.3" %}
+{% set version = "0.7.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: d56352940d7ba15e58ace6416cc5e90b56b82c89e5e1c800a9bd26aa9d3b3ee4
+  sha256: 72b3977bb35d4de1f5497ec0181cb3333b9e020890595c87b717ed932414b0c5
 
 build:
   number: 0
