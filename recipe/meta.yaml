@@ -39,7 +39,7 @@ test:
   commands:
     - protol
     - protol --help
-    - pytest --pyargs protoletariat
+    - pytest --pyargs protoletariat -k 'not test_version'
 
 about:
   home: https://github.com/cpcloud/protoletariat
