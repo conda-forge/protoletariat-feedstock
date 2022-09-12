@@ -1,5 +1,5 @@
 {% set name = "protoletariat" %}
-{% set version = "1.0.0" %}
+{% set version = "1.0.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 08eaf84cd902498c61abc734a5f8d5d5ae934181720b08e59eb80c6b07aedad3
+  sha256: df3a2ac380d0a3d5e2c9f592fc1feb98e332ecd919c3953ba64656cff4c616e9
 
 build:
   number: 0
@@ -25,7 +25,7 @@ requirements:
     - python >=3.7
     - astunparse <2,>=1.6.3
     - click <9,>=7.1.2
-    - protobuf <4,>=3.19.1
+    - protobuf <5,>=3.19.1
 
 test:
   requires:
