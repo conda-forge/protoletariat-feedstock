@@ -1,13 +1,13 @@
 {% set name = "protoletariat" %}
-{% set version = "3.1.0" %}
+{% set version = "3.3.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: c01bf82e98937cd3c8f9c62148a6dc49ef8c727a1fe48a0908a8f78146d2a06c
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: a6a18089064b53767a72ded3be6b522cc813ff3401e3ed8c1dfbbd923eef09fa
 
 build:
   number: 0
@@ -25,7 +25,8 @@ requirements:
     - python >=3.7
     - astunparse <2,>=1.6.3
     - click <9,>=8
-    - protobuf <5,>=3.19.1
+    - protobuf <6,>=3.19.1
+    # - grpcio-tools <2,>=1.42.0
     # - grpcio-tools <2,>=1.42.0
 
 test:
